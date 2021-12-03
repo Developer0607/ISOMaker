@@ -162,6 +162,9 @@ int main()
         fin.read(tmpd, i>9999?9999:i);
         fout.write(tmpd, i > 9999 ? 9999 : i);
     }
+    for (int i = f_l; i < 2048; i++) {
+        fout.write(&bl_0, 1);
+    }
     fout.close();
     return 0;
 }
