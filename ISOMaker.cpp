@@ -110,7 +110,7 @@ struct list_table {
 int main()
 {
     
-    long long tmp4l = 0x01d77000;
+    long long f_l = 0x0d;
     char data[2048] = { 0 };
     isohead iso1;
     overisohead o1;
@@ -158,7 +158,7 @@ int main()
     fout.write(data, 2048 - sizeof(hw) - sizeof(hw_gdir)-6);
     fout.write(data, 2048);
     char tmpd[10000];
-    for (long long i = tmp4l; i > 0; i -= 9999) {
+    for (long long i = f_l; i > 0; i -= 9999) {
         fin.read(tmpd, i>9999?9999:i);
         fout.write(tmpd, i > 9999 ? 9999 : i);
     }
