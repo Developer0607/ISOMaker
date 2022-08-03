@@ -27,7 +27,7 @@ struct w {
     char date[7]={121,2,24,9,30,8,0};
     
     char wjbz = 2;
-    char wy[2] = { 0,0 };
+    char no_use[2] = { 0,0 };
     char vn_lsb[2] = { 1,0 };
     char vn_msb[2] = { 0,1 };
     char fnlen = 1;
@@ -36,11 +36,11 @@ struct isohead {
     unsigned char lx = 1;
     char cd001_1[5] = { 'C','D','0','0','1' };
     unsigned char ms = 0x01;
-    char wy1 = 0;
+    char no_use1 = 0;
     char systemname[32] = { "Windows                        " }; 
     
     char vname[32] = { "Hello World!                   " };
-    char wy2[8] = { 0,0,0,0,0,0,0,0 };
+    char no_use2[8] = { 0,0,0,0,0,0,0,0 };
     char vl1= 0xbf;
     char vl_1 = 0x75;
     char vl_2 = 0;
@@ -49,10 +49,10 @@ struct isohead {
     char vl_5 = 0;
     char vl_6 = 0x75;
     char vl2 = 0xbf;
-    long long wy4 = 0;
-    long long wy5 = 0;
-    long long wy6 = 0;
-    long long wy7 = 0;
+    long long no_use4 = 0;
+    long long no_use5 = 0;
+    long long no_use6 = 0;
+    long long no_use7 = 0;
     char dn1 = 1;
     char dn2 = 0;
     char dn3 = 0;
@@ -78,9 +78,9 @@ struct isohead {
     char cd[8] = {0,0x08,0,0,0,0,0x08,0};
     char date[7]={121,2,24,9,30,8,0};
     char bz = 2;
-    short wy8 = 0;
+    short no_use8 = 0;
     char vnumber[4] = { 1,0,0,1 };
-    char wy9 = 1;
+    char no_use9 = 1;
     char filename = 0x00;
     char k2[623] = { 0 };
     char createdate[17] = { '2','0','2','1','0','2','2','4','0','9','3','0','0','8','0','0',' ' };
@@ -88,24 +88,24 @@ struct isohead {
     char sxdt[17] = { "0000000000000000" };
     char gsdt[17] = { "0000000000000000" };
     char ver = 1;
-    char wy10[1166] = { 0 };
+    char no_use10[1166] = { 0 };
 };
 struct overisohead {
     char ver = 255;
     char a[6] = { "CD001" };
-    char wy[2041] = { 0 };
+    char no_use[2041] = { 0 };
 };
 struct dir_list {
     w w1;
     char x = 0;
-    char wy1[2015] = {0};
+    char no_use1[2015] = {0};
 };
 struct list_table {
     char len = 1;
     char kzlen = 0;
     char lba[4] = { 0,0,0,0 };
     char pdn = 1;
-    char wy[2041] = { 0 };
+    char no_use[2041] = { 0 };
 };
 int main()
 {
